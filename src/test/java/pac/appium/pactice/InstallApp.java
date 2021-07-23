@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class LaunchTouchscreen {
+public class InstallApp {
 
 	public static void main(String[] args) throws MalformedURLException {
 		DesiredCapabilities dc = new DesiredCapabilities();
@@ -19,21 +19,17 @@ public class LaunchTouchscreen {
 		  dc.setCapability("platformVersion", "8.1.0");
 		  dc.setCapability("UDID", "emulator-5554");
 		 
-		  dc.setCapability("appPackage", "jp.rallwell.siriuth.touchscreentest");
-		  dc.setCapability("appActivity", ".TouchScreenTestActivity");
+		  //dc.setCapability("appPackage", "jp.rallwell.siriuth.touchscreentest");
+		  //dc.setCapability("appActivity", ".TouchScreenTestActivity");
 		  
-           URL url = new URL("http://localhost:4723/wd/hub");
+         URL url = new URL("http://localhost:4723/wd/hub");
 		  
 		  AndroidDriver driver = new AndroidDriver(url, dc);
 
 		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		  
-		  System.out.println("App Status="+driver.isAppInstalled("jp.rallwell.siriuth.touchscreentest"));
-
-		  	driver.removeApp("jp.rallwell.siriuth.touchscreentest");
-		  	System.out.println("App Status="+driver.isAppInstalled("jp.rallwell.siriuth.touchscreentest"));
-
-
+		
+		  dc.setCapability("app", "E:\\AppiumFiles\\Touch Screen Test_v1.7.14_apkpure.com.apk");
 	}
 
 }
