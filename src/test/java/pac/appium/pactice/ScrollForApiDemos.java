@@ -28,7 +28,7 @@ public class ScrollForApiDemos {
 		String PN = dcfile.readDataFromPropertyFile("platformName");
 		String PV = dcfile.readDataFromPropertyFile("platformVersion");
 		String ID = dcfile.readDataFromPropertyFile("UDID");
-
+		
 
 		dc.setCapability("appPackage", "io.appium.android.apis");
 		dc.setCapability("appActivity", ".ApiDemos");

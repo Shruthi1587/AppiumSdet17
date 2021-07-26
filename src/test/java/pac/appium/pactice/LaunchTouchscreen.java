@@ -33,7 +33,7 @@ public class LaunchTouchscreen {
 		  	driver.removeApp("jp.rallwell.siriuth.touchscreentest");
 		  	System.out.println("App Status="+driver.isAppInstalled("jp.rallwell.siriuth.touchscreentest"));
 
-
+		  	
 	}
 
 }
